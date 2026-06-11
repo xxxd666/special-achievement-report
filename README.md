@@ -10,6 +10,8 @@
 
 ![专项成果汇报](./docs/screenshots/banner.jpg)
 
+<p align="center"><b>中文</b> · <a href="#english">English ↓</a></p>
+
 > 一个让**任何人都能做出咨询公司级汇报**的 Claude 技能。
 > 它的核心不是帮你排版 PPT，而是帮你把「我做了一堆事」**重组成「我创造了这些价值」**——用麦肯锡、BCG、贝恩、亚马逊等顶级机构的汇报方法论，把零散素材变成有逻辑、有洞见、领导记得住的成果汇报。
 
@@ -177,3 +179,116 @@ special-achievement-report/
 ## License
 
 [MIT](./LICENSE) © 2026 许吉伊
+
+---
+---
+
+<a id="english"></a>
+
+# Special Achievement Report
+
+> A Claude skill that lets **anyone produce consulting-grade achievement reports**.
+> Its core isn't laying out slides — it's turning *"I did a lot of things"* into *"here's the value I created"*, using the reporting methodologies of McKinsey, BCG, Bain, Amazon and more to reshape scattered material into a logical, insightful report your leadership will actually remember.
+
+**Any industry, any role, zero technical background required.** Whether you're in operations, HR, sales, marketing, R&D, finance, teaching, healthcare, or running your own thing — if you need to *make your results clear and compelling*, this helps. It works like a senior reporting advisor sitting next to you, walking you through it step by step.
+
+<p align="center"><i>"Doing a lot" never equals "saying it well." This skill fixes the latter.</i></p>
+
+## 🚀 Get started in 30 seconds (copy this to Claude)
+
+```
+Use the special achievement report skill to help me build my 2025 annual results report.
+```
+
+It chats with you like an advisor (who's it for, what you did, what data you have), structures your report, drafts an outline, then picks a clean visual format. **You talk, it thinks.**
+
+## ✨ What it solves
+
+Many people "did tons of work but can't articulate the value" — leadership doesn't remember it, and you feel shortchanged. This skill fills the hardest gap in the middle:
+
+```
+You:   did lots of things, but can't explain the value
+        │  ← reorganize with proven methodology (this is the key step)
+Skill: a logical, data-backed, insightful report leadership remembers
+```
+
+Fits **any results-reporting scenario**: annual/quarterly reviews, project retros, job defenses, promotions, budget/resource asks, external sharing, investor pitches, research wrap-ups, portfolios…
+
+## 🧠 Nine families of reporting methodology (combined by scenario, not just one)
+
+Real reports stack several methods. The skill **configures a combination** based on "who's it for, what's the occasion" — and you can add, drop, or mix.
+
+| Family | In a nutshell | Best for |
+|--------|---------------|----------|
+| **McKinsey** (default) | Pyramid + MECE + SCQA + Air-Rain-Umbrella; 9 methods / 3 subgroups | General, upward reporting |
+| **BCG** | Every slide title *is* the conclusion (action titles) | Data highlights, impact |
+| **Bain** | Answer first, results delivered | Winning buy-in, ROI |
+| **PwC** | Fact – Criteria – Gap – Impact – Recommendation | Retro / self-audit / risk |
+| **Deloitte** | As-Is → To-Be + value map | Transformation / process redesign |
+| **Amazon** | 6-pager narrative memo + PR/FAQ | New initiatives / deep cases |
+| **Google** | OKR review: objective–key results–scoring–attribution | Goal-attainment reviews |
+| **Bridgewater / notables** | Signal – Diagnosis – Principle – Action | Lessons & experience distillation |
+| **Beyond the pyramid** | BLUF / STAR / story arc | Ultra-short / job defense / talks |
+
+> Not sure which? Just say "go with the safest option" — it defaults to the McKinsey baseline combination.
+
+## 🎨 Three output formats (chosen only after content is final; color is the last mile)
+
+1. **Deep report** — landscape 16:9 single-page HTML, dense, for close reading / projection / print.
+2. **Editorial-magazine PPT** — horizontal deck, literary/humanistic feel (via `guizang-ppt-skill`).
+3. **Swiss-style PPT** — horizontal deck, grid + high-contrast color, data-forward (via `guizang-ppt-skill`).
+
+The first time you pick colors, the skill generates a local "palette overview" so you choose visually instead of imagining from text.
+
+## 🔄 How it walks you through it (6 steps, all conversational)
+
+```
+① Get to know you   On first use, note your industry/role (asked once, reused after)
+② Read the room     Who's it for? Annual? Defense? Resource ask?
+③ Gather material   You provide data, or it drafts first (asks before writing, never fabricates)
+④ Configure methods Pick a methodology combo by scenario; generate an outline to confirm
+⑤ Choose format     After content is locked, pick layout + color (local palette preview)
+⑥ Deliver           Single-file HTML + "which 3 pages to present in 5 min, likely questions"
+```
+
+## 💡 Why this instead of just asking AI to "write a summary"
+
+| Just asking AI to "write a year-end summary" | Using this skill |
+|---|---|
+| A flat list of "what I did" | Distills "what value I created" via methodology |
+| Generic, AI-flavored prose | Sounds like a senior advisor — no template tone |
+| One style throughout | 9 method families matched to the occasion |
+| A wall of text | A ready-to-project/print deliverable + talking points |
+| Vague numbers | Numbers come from you; gaps marked `【TBD】`, never fabricated |
+
+## 📦 Install (3 steps, no coding)
+
+1. Find your Claude skills folder: Windows `C:\Users\<you>\.claude\skills\` / macOS `~/.claude/skills/`
+2. Drop the whole `special-achievement-report` folder in.
+3. Restart Claude and say "use the special achievement report skill to build a report" to verify.
+
+## ⚠️ About the web-PPT dependency
+
+- **Deep report (format ①) works out of the box** — no dependency.
+- **Editorial / Swiss PPT (formats ②③)** reuse templates and palettes from `guizang-ppt-skill`, which must be installed **as a sibling**:
+  ```
+  .claude/skills/
+  ├── special-achievement-report/   ← this skill
+  └── guizang-ppt-skill/            ← web-PPT dependency (sibling)
+  ```
+- It is **not** bundled here. Get it at: **https://github.com/op7418/guizang-ppt-skill**
+- No worries if you skip it — the skill falls back to the deep report and still produces a full report.
+
+## 🔒 Two design principles
+
+1. **The value is reporting *thinking*, not color.** Effort goes into making the value clear; visuals are the last mile, adjustable anytime.
+2. **No "AI flavor."** It talks like a senior advisor — no jargon dumps, no robotic step-walking.
+
+## 🙏 Credits
+
+- Web-PPT templates and palettes from [`guizang-ppt-skill`](https://github.com/op7418/guizang-ppt-skill).
+- Methodologies reference publicly published reporting/communication methods from McKinsey, BCG, Bain, PwC, Deloitte, Amazon, Google, Bridgewater, and others.
+
+## License
+
+[MIT](./LICENSE) © 2026 Xu Jiyi
