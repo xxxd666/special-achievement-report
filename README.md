@@ -107,13 +107,35 @@
 
 ---
 
-## 📦 安装（三步，不需要懂技术）
+## 📦 安装
 
-1. **找到 Claude 技能目录**：
-   - Windows：`C:\Users\<你的用户名>\.claude\skills\`
-   - macOS：`~/.claude/skills/`
-2. **把整个 `special-achievement-report` 文件夹放进去**。
-3. **重启 Claude**，发一句「用专项成果汇报技能帮我做份汇报」验证。
+技能目录统一放在 `~/.claude/skills/special-achievement-report`。任选一种方式：
+
+### ⚡ 方式一：一行命令（推荐）
+
+```bash
+npx skills add https://github.com/xxxd666/special-achievement-report --skill special-achievement-report
+```
+
+### 🤖 方式二：把下面这段发给 AI（Claude Code / Cursor 等有 shell 权限的 Agent）
+
+```
+请帮我安装这个 Claude 技能：
+1. 确保 ~/.claude/skills/ 目录存在（不存在就创建）
+2. 执行 git clone https://github.com/xxxd666/special-achievement-report.git ~/.claude/skills/special-achievement-report
+3. 验证：ls ~/.claude/skills/special-achievement-report/ 应能看到 SKILL.md 和 references/
+```
+
+### 🛠 方式三：手动命令行
+
+```bash
+git clone https://github.com/xxxd666/special-achievement-report.git ~/.claude/skills/special-achievement-report
+```
+
+> Windows 用户：`~/.claude/` 即 `C:\Users\<你的用户名>\.claude\`。
+
+**验证**：装好后重启 Claude，发一句「用专项成果汇报技能帮我做份汇报」，能进入引导流程即成功。
+**更新**：重跑安装命令，或在技能目录里执行 `git pull`。
 
 ---
 
@@ -126,8 +148,11 @@
   ├── special-achievement-report/   ← 本技能
   └── guizang-ppt-skill/            ← 网页 PPT 依赖（同级）
   ```
-- `guizang-ppt-skill` 不随本仓库一起发布。请自行获取并安装：
-  > **guizang-ppt-skill 仓库地址：https://github.com/op7418/guizang-ppt-skill**
+  一行装好它：
+  ```bash
+  npx skills add https://github.com/op7418/guizang-ppt-skill --skill guizang-ppt-skill
+  ```
+  仓库地址：**https://github.com/op7418/guizang-ppt-skill**
 - 没装也没关系——技能会自动建议你用**深度汇报版**，照样能产出完整汇报。
 
 ---
@@ -261,23 +286,47 @@ The first time you pick colors, the skill generates a local "palette overview" s
 | A wall of text | A ready-to-project/print deliverable + talking points |
 | Vague numbers | Numbers come from you; gaps marked `【TBD】`, never fabricated |
 
-## 📦 Install (3 steps, no coding)
+## 📦 Install
 
-1. Find your Claude skills folder: Windows `C:\Users\<you>\.claude\skills\` / macOS `~/.claude/skills/`
-2. Drop the whole `special-achievement-report` folder in.
-3. Restart Claude and say "use the special achievement report skill to build a report" to verify.
+The skill lives at `~/.claude/skills/special-achievement-report`. Pick any method:
+
+**① One-line command (recommended)**
+```bash
+npx skills add https://github.com/xxxd666/special-achievement-report --skill special-achievement-report
+```
+
+**② Paste this to an AI agent** (Claude Code / Cursor / any agent with shell access)
+```
+Please install this Claude skill:
+1. Ensure ~/.claude/skills/ exists (create it if not)
+2. Run: git clone https://github.com/xxxd666/special-achievement-report.git ~/.claude/skills/special-achievement-report
+3. Verify: ls ~/.claude/skills/special-achievement-report/ should show SKILL.md and references/
+```
+
+**③ Manual clone**
+```bash
+git clone https://github.com/xxxd666/special-achievement-report.git ~/.claude/skills/special-achievement-report
+```
+
+> Windows: `~/.claude/` means `C:\Users\<you>\.claude\`.
+
+**Verify:** restart Claude and say "use the special achievement report skill to build a report." **Update:** re-run the install command, or `git pull` in the skill folder.
 
 ## ⚠️ About the web-PPT dependency
 
 - **Deep report (format ①) works out of the box** — no dependency.
-- **Editorial / Swiss PPT (formats ②③)** reuse templates and palettes from `guizang-ppt-skill`, which must be installed **as a sibling**:
+- **Editorial / Swiss PPT (formats ②③)** reuse templates and palettes from `guizang-ppt-skill`, installed **as a sibling**:
   ```
   .claude/skills/
   ├── special-achievement-report/   ← this skill
   └── guizang-ppt-skill/            ← web-PPT dependency (sibling)
   ```
-- It is **not** bundled here. Get it at: **https://github.com/op7418/guizang-ppt-skill**
-- No worries if you skip it — the skill falls back to the deep report and still produces a full report.
+  Install it in one line:
+  ```bash
+  npx skills add https://github.com/op7418/guizang-ppt-skill --skill guizang-ppt-skill
+  ```
+  Repo: **https://github.com/op7418/guizang-ppt-skill**
+- Skip it if you like — the skill falls back to the deep report and still produces a full report.
 
 ## 🔒 Two design principles
 
