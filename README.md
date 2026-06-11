@@ -148,11 +148,7 @@ git clone https://github.com/xxxd666/special-achievement-report.git ~/.claude/sk
   ├── special-achievement-report/   ← 本技能
   └── guizang-ppt-skill/            ← 网页 PPT 依赖（同级）
   ```
-  一行装好它：
-  ```bash
-  npx skills add https://github.com/op7418/guizang-ppt-skill --skill guizang-ppt-skill
-  ```
-  仓库地址：**https://github.com/op7418/guizang-ppt-skill**
+  仓库地址：**https://github.com/op7418/guizang-ppt-skill**（按其说明自行安装即可）
 - 没装也没关系——技能会自动建议你用**深度汇报版**，照样能产出完整汇报。
 
 ---
@@ -321,11 +317,7 @@ git clone https://github.com/xxxd666/special-achievement-report.git ~/.claude/sk
   ├── special-achievement-report/   ← this skill
   └── guizang-ppt-skill/            ← web-PPT dependency (sibling)
   ```
-  Install it in one line:
-  ```bash
-  npx skills add https://github.com/op7418/guizang-ppt-skill --skill guizang-ppt-skill
-  ```
-  Repo: **https://github.com/op7418/guizang-ppt-skill**
+  Repo: **https://github.com/op7418/guizang-ppt-skill** (install per its own instructions)
 - Skip it if you like — the skill falls back to the deep report and still produces a full report.
 
 ## 🔒 Two design principles
