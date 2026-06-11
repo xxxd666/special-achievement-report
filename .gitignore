@@ -1,0 +1,25 @@
+# 生成的汇报产物 / 项目目录（用户自己的数据，不入库）
+项目/
+项目-*/
+output/
+*.local.html
+
+# 用户画像（含个人/行业信息，且本就存在技能目录外）
+*.profile.md
+special-achievement-report.profile.md
+
+# 图片素材
+**/images/
+
+# 依赖 / 构建
+node_modules/
+
+# 操作系统杂项
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

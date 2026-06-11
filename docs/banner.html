@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Repo Banner · 专项成果汇报</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&family=Noto+Sans+SC:wght@300;500;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--red:#A80D0B;--ink:#0a0a0a;--paper:#fafaf8;--zh:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;--mono:"Inter",monospace}
+  body{background:#cfcdc8;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:30px}
+  /* 1280x640 = GitHub social preview 比例 */
+  .banner{width:1280px;height:640px;background:var(--paper);position:relative;overflow:hidden;
+    font-family:var(--zh);box-shadow:0 8px 40px rgba(0,0,0,.18)}
+  /* 左侧红色块 */
+  .left{position:absolute;left:0;top:0;bottom:0;width:46%;background:var(--red);color:#fff;
+    padding:64px 56px;display:flex;flex-direction:column;justify-content:space-between}
+  .dots{position:absolute;right:-40px;bottom:-40px;width:280px;height:280px;opacity:.14;
+    background-image:radial-gradient(#fff 2px,transparent 2px);background-size:22px 22px}
+  .eyebrow{font-family:var(--mono);font-size:15px;letter-spacing:.28em;text-transform:uppercase;opacity:.8;font-weight:400}
+  .ttl{font-weight:800;font-size:62px;line-height:1.04;letter-spacing:-.02em;position:relative;z-index:1}
+  .ttl .thin{font-weight:200}
+  .sub{font-size:19px;line-height:1.6;opacity:.92;font-weight:300;max-width:30ch}
+  .by{font-family:var(--mono);font-size:14px;letter-spacing:.1em;opacity:.7}
+  /* 右侧白区 */
+  .right{position:absolute;right:0;top:0;bottom:0;left:46%;padding:60px 54px;display:flex;flex-direction:column;justify-content:center;gap:26px}
+  .big-zh{font-weight:200;font-size:40px;line-height:1.18;color:var(--ink);letter-spacing:-.01em}
+  .big-zh b{font-weight:800;color:var(--red)}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;font-weight:700;padding:7px 14px;border:1.5px solid var(--ink);border-radius:30px;color:var(--ink)}
+  .chip.red{background:var(--red);color:#fff;border-color:var(--red)}
+  .frameworks{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .fw{font-size:14px;font-weight:500;color:#555;background:#efedea;padding:6px 12px;border-radius:6px}
+  .arrow{font-family:var(--mono);font-size:15px;color:var(--red);font-weight:700;letter-spacing:.05em}
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="left">
+    <div class="dots"></div>
+    <div class="eyebrow">SPECIAL ACHIEVEMENT REPORT</div>
+    <div class="ttl">专项<br><span class="thin">成果汇报</span></div>
+    <div>
+      <div class="sub">让任何人都能做出<br>咨询公司级的成果汇报。</div>
+      <div class="by" style="margin-top:22px">A Claude Skill · MIT</div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="big-zh">把「做了一堆事」<br>讲成「<b>创造了这些价值</b>」</div>
+    <div class="row">
+      <span class="chip red">9 大方法论</span>
+      <span class="chip">所有行业</span>
+      <span class="chip">零技术门槛</span>
+      <span class="chip">像顾问陪你</span>
+    </div>
+    <div class="frameworks">
+      <span class="fw">麦肯锡</span><span class="fw">BCG</span><span class="fw">贝恩</span>
+      <span class="fw">普华永道</span><span class="fw">德勤</span><span class="fw">亚马逊</span>
+      <span class="fw">谷歌 OKR</span><span class="fw">桥水</span>
+    </div>
+    <div class="arrow">年终汇报 · 项目复盘 · 述职竞聘 · 争取资源 →</div>
+  </div>
+</div>
+</body>
+</html>
